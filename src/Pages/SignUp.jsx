@@ -3,7 +3,67 @@ import Logo from "../components/Logo/Logo";
 import { useState } from "react";
 import ProgressIndicator from "../components/ProgressIndicator/ProgressIndicator";
 export default function StartForm() {
-  //USESTATES FOR INPUT BOXES
+  const [emailInput, setEmailInput] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+  const [checkPasswordInput, setCheckPasswordInput] = useState("");
+  const [passwordStrength, setPasswordStrength] = useState("weak");
+
+  //HANDLE FUNCTIONS
+  function handleEmailChange(e) {
+    setEmailInput(e.target.value);
+  }
+
+  function handlePasswordChange(e) {
+    setPasswordInput(e.target.value);
+  }
+
+  function handleCheckPassword(e) {
+    setCheckPasswordInput(e.target.value);
+  }
+
+  function isPasswordValid() {
+    if (passwordInput && passwordInput.split("").length > 7) {
+      return true;
+    }
+    return false;
+  }
+
+  function isCheckPasswordValid() {
+    if (
+      passwordInput &&
+      checkPasswordInput &&
+      passwordInput === checkPasswordInput
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  function isValidEmail() {
+    if (emailInput && /\S+@\S+\.\S+/.test(emailInput)) {
+      return true;
+    }
+    return false;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!isValidEmail(emailInput)) {
+      return false;
+    }
+    if (!passwordInput) {
+      return false;
+    }
+
+    if (!passwordsMatch(passwordInput, checkPasswordInput)) {
+      return false;
+    }
+
+    if (isValidEmail && passwordsMatch) {
+      console.log("good");
+      // useNavigate()
+    }
+  }
   return (
     <div className="sign-up">
       <h1>Sign Up</h1>
@@ -27,16 +87,19 @@ export default function StartForm() {
             className="sign-up__input-box"
             type="text"
             placeholder="Email"
+            onChange={handleEmailChange}
           />
           <input
             className="sign-up__input-box"
             type="text"
             placeholder="Password"
+            onChange={handlePasswordChange}
           />
           <input
             className="sign-up__input-box"
             type="text"
             placeholder="Confirm Password"
+            onChange={handleCheckPassword}
           />
         </div>
         <button className="sign-up__button">Start a Free Trial</button>
