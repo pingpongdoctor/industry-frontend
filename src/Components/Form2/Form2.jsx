@@ -1,5 +1,4 @@
-import { useDebugValue, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Form2 = () => {
   const [emailInput, setEmailInput] = useState("");

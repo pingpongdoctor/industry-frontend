@@ -6,7 +6,7 @@ export default function StartForm() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
   const [checkPasswordInput, setCheckPasswordInput] = useState("");
-  const [passwordStrength, setPasswordStrength] = useState("weak");
+  // const [passwordStrength, setPasswordStrength] = useState("weak");
 
   //HANDLE FUNCTIONS
   function handleEmailChange(e) {
@@ -21,6 +21,7 @@ export default function StartForm() {
     setCheckPasswordInput(e.target.value);
   }
 
+  //FUNCTION TO VALIDATE INPUT DATA
   function isPasswordValid() {
     if (passwordInput && passwordInput.split("").length > 7) {
       return true;
@@ -46,29 +47,35 @@ export default function StartForm() {
     return false;
   }
 
+  function isPasswordMatch() {
+    if (passwordInput !== checkPasswordInput) {
+      return false;
+    }
+    return true;
+  }
+
+  //FUNCTION USED TO SUBMIT
   function handleSubmit(e) {
     e.preventDefault();
-    if (!isValidEmail(emailInput)) {
+    if (!isValidEmail()) {
       return false;
     }
-    if (!passwordInput) {
-      return false;
-    }
-
-    if (!passwordsMatch(passwordInput, checkPasswordInput)) {
+    if (!isPasswordValid()) {
       return false;
     }
 
-    if (isValidEmail && passwordsMatch) {
-      console.log("good");
-      // useNavigate()
+    if (!isCheckPasswordValid()) {
+      return false;
     }
+    if (!isPasswordMatch()) {
+      return false;
+    }
+    return true;
   }
   return (
     <div className="sign-up">
-      <h1>Sign Up</h1>
-      <ProgressIndicator indicatorClassName={"indicator indicator--sign-up"} />
       <Logo logoClassName="logo--sign-up" />
+      <ProgressIndicator indicatorClassName={"indicator indicator--sign-up"} />
       <form className="sign-up__form">
         <h2 className="sign-up__heading">
           Get started witsh America's largest bookkeeping service
@@ -78,11 +85,18 @@ export default function StartForm() {
           to ensure that Bench is the best fit for your business.
         </p>
         <div className="sign-up__wrapper">
-          <input
-            className="sign-up__input-box"
-            type="text"
-            placeholder="Full Name"
-          />
+          <div className="sign-up__two-boxes-wrapper">
+            <input
+              className="sign-up__input-box"
+              type="text"
+              placeholder="First Name"
+            />
+            <input
+              className="sign-up__input-box"
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
           <input
             className="sign-up__input-box"
             type="text"

@@ -9,7 +9,6 @@
   flex-direction: column;
   width: 600px;
   height: 540px;
-  background-color: $start-form-color;
   color: #ffffff;
   padding: 0 30px;
   border-radius: 5px;
@@ -30,6 +29,7 @@
   padding: 1rem;
   border: none;
   outline: none;
+  background-color: rgba(128, 128, 128, 0.162);
 }
 
 .sign-up__button {
@@ -49,4 +49,9 @@
 
 .sign-up__link {
   color: grey;
+}
+
+.sign-up__two-boxes-wrapper {
+  display: flex;
+  justify-content: space-between;
 }

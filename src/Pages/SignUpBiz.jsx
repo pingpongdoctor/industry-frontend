@@ -4,7 +4,7 @@ import Logo from "../components/Logo/Logo";
 
 export default function () {
   return (
-    <div className="sign-up">
+    <div className="sign-up-biz">
       <div className="form">
         <form action="OnSubmit">
           <Logo logoClassName="logo--form" />
