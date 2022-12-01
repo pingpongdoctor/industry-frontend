@@ -115,8 +115,8 @@ export default function StartForm() {
             placeholder="Confirm Password"
             onChange={handleCheckPassword}
           />
+          <button className="sign-up__button">Start a Free Trial</button>
         </div>
-        <button className="sign-up__button">Start a Free Trial</button>
       </form>
     </div>
   );
