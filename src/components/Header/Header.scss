@@ -1,0 +1,12 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 10vh;
+}
+
+.ph-nav-left,
+.ph-nav-right {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
