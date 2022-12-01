@@ -1,0 +1,18 @@
+.welcome {
+  background-image: url("../Assets/Images/WebAppBG.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.modal {
+  background-image: url("../Assets/Images/Frame28.png");
+  z-index: 200;
+  width: 25%;
+  height: 63vh;
+  background-size: contain;
+}

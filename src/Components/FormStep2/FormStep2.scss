@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-@use "../../src/styles/partials/variables" as *;
+@use "../../styles/partials/variables" as *;
 
 // *::before,
 // *::after {
@@ -7,13 +6,7 @@
 // }
 
 .sign-up-biz {
-  // background-color: F7F8FA;
-  width: 1280px;
-  // padding: 0 2rem;
-=======
-.sign-up-biz {
   padding: 0 2rem;
->>>>>>> dev
   display: flex;
   justify-content: space-between;
   width: 100%;

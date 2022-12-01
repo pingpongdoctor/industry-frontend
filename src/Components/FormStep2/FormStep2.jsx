@@ -1,15 +1,18 @@
 import { Select, FormControl, InputLabel, MenuItem } from "@mui/material";
 
-import "./SignUpBiz.scss";
-import design from "../Assets/Images/frame-33.png";
+import "./FormStep2.scss";
+import design from "../../Assets/Images/frame-33.png";
 
-import Logo from "../components/Logo/Logo";
+import Logo from "../Logo/Logo";
 
-export default function () {
+export default function FormStep2(props) {
+  function handleSubmit() {
+    props.goToStep3();
+  }
   return (
     <div className="sign-up-biz">
       <div className="form">
-        <form action="OnSubmit">
+        <form>
           <Logo logoClassName="logo--form" />
           <h1>Tell us about your business</h1>
           <p className="form__para--text">
@@ -93,7 +96,9 @@ export default function () {
             </FormControl>
           </div>
           <div>
-            <button className="form__button">Next</button>
+            <button onClick={handleSubmit} className="form__button">
+              Next
+            </button>
           </div>
         </form>
       </div>

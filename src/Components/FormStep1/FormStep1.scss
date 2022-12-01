@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 
 .sign-up {
-  padding: 0 140px;
+  padding: 0 50px;
 }
 
 .sign-up__big-wrapper {
@@ -80,7 +80,7 @@
 }
 
 .sign-up__big-image {
-  width: 45%;
+  height: 100vh;
 }
 
 .sign-up__input-box--error {
