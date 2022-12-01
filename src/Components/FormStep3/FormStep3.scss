@@ -1,4 +1,4 @@
-@use "../../src/styles/partials/variables" as *;
+@use "../../styles/partials/variables" as *;
 
 .sign-up {
   padding: 0 140px;
@@ -48,6 +48,9 @@
   justify-content: space-between;
   input {
     width: 49%;
+  }
+  label {
+    color: black;
   }
 }
 
