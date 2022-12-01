@@ -1,4 +1,7 @@
+import { Select, FormControl, InputLabel, MenuItem } from "@mui/material";
+
 import "./SignUpBiz.scss";
+import design from "../Assets/Images/frame-33.png";
 
 import Logo from "../components/Logo/Logo";
 
@@ -9,97 +12,93 @@ export default function () {
         <form action="OnSubmit">
           <Logo logoClassName="logo--form" />
           <h1>Tell us about your business</h1>
-          <h3>continued...</h3>
-          <div>
-            <label htmlFor="company size">
-              <h3>Company Size</h3>
-            </label>
-            <p>Select number of owners, employees, and contractors </p>
-            <select name="employees">
-              <option value="select">-select-</option>
-              <option value="1" className="form__option--value">
-                1
-              </option>
-              <option value="2-5" className="form__option--value">
-                2-5
-              </option>
-              <option value="6-10" className="form__option--value">
-                6-10
-              </option>
-              <option value="11-25" className="form__option--value">
-                11-25
-              </option>
-              <option value="26+" className="form__option--value">
-                26+
-              </option>
-              {/* <option value="unsure" className="form__option--value">I'm not sure</option> */}
-            </select>
+          <p className="form__para--text">
+            We'd like to learn more about your business so that we can provide
+            you with the best experience possible
+          </p>
+          <div className="form__option">
+            <p className="form__para">
+              Select number of owners, employees, and contractors{" "}
+            </p>
+            <FormControl fullWidth>
+              <InputLabel className="form__label" id="demo-simple-select-label">
+                Company Size
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+                label="Company Size"
+                // onChange={handleChange}
+              >
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2 - 5}>2-5</MenuItem>
+                <MenuItem value={6 - 10}>6-10</MenuItem>
+                <MenuItem value={11 - 25}>11-25</MenuItem>
+                <MenuItem value={"26+"}>26+</MenuItem>
+              </Select>
+            </FormControl>
           </div>
-          <div>
-            <label htmlFor="Revenue">
-              <h3>Monthly Revenue</h3>
-            </label>
-            <p>Select average monthly revenue before deductions</p>
-            <select name="revenue">
-              <option value="0" className="form__option--value">
-                -select-
-              </option>
-              <option value="0" className="form__option--value">
-                $0 (Pre-revenue)
-              </option>
-              <option value="1" className="form__option--value">
-                $1-$1,000
-              </option>
-              <option value="2" className="form__option--value">
-                $1,001-$10,000
-              </option>
-              <option value="3" className="form__option--value">
-                %10,001-$100,000
-              </option>
-              <option value="4" className="form__option--value">
-                More than $100,001
-              </option>
-              <option value="5" className="form__option--value">
-                I'm not sure
-              </option>
-            </select>
+          <div className="form__option">
+            <p className="form__para">
+              Select average monthly revenue before deductions
+            </p>
+            <FormControl fullWidth>
+              <InputLabel className="form__label" id="demo-simple-select-label">
+                Monthly Revenue
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+                label="Company Size"
+                // onChange={handleChange}
+              >
+                <MenuItem value={0}>$0 (Pre-revenue)</MenuItem>
+                <MenuItem value={"1,000"}> $1-$1,000</MenuItem>
+                <MenuItem value={"10,000"}>$1,001-$10,000</MenuItem>
+                <MenuItem value={"100,000"}>$10,001-$100,000</MenuItem>
+                <MenuItem value={"100,000+"}>More than $100,001</MenuItem>
+                <MenuItem value={"Unknown"}>I'm not sure</MenuItem>
+              </Select>
+            </FormControl>
           </div>
-          <div>
+          <div className="form__option">
             <label htmlFor="tax-return">
-              <h3>Last Tax Return</h3>
+              <h3 className="form__label">Last Tax Return</h3>
             </label>
-            <p>When did you file your last business tax return?</p>
-            <select name="tax-return">
-              <option value="0" className="form__option--value">
-                -select-
-              </option>
-              <option value="1" className="form__option--value">
-                I'm on track with my tax filing
-              </option>
-              <option value="2" className="form__option--value">
-                Tax year 2021
-              </option>
-              <option value="3" className="form__option--value">
-                Tax Year 2020
-              </option>
-              <option value="4" className="form__option--value">
-                Tax year 2019 or prior
-              </option>
-              <option value="5" className="form__option--value">
-                My business is new
-              </option>
-              <option value="5" className="form__option--value">
-                Unknown/I need help figure this out
-              </option>
-            </select>
-            <div>
-              <button>Next</button>
-            </div>
+            <p className="form__para">
+              When did you file your last business tax return?
+            </p>
+            <FormControl fullWidth>
+              <InputLabel className="form__label" id="demo-simple-select-label">
+                Last Tax Return
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+                label="Company Size"
+                // onChange={handleChange}
+              >
+                <MenuItem value={0}>I'm on track with my tax filing</MenuItem>
+                <MenuItem value={"1,000"}> Tax year 2021</MenuItem>
+                <MenuItem value={"10,000"}>Tax Year 2020</MenuItem>
+                <MenuItem value={"100,000"}>Tax year 2019 or prior</MenuItem>
+                <MenuItem value={"100,000+"}>My business is new</MenuItem>
+                <MenuItem value={"Unknown"}>
+                  Unknown/I need help figure this out
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div>
+            <button className="form__button">Next</button>
           </div>
         </form>
       </div>
-      <div className="design">
-        <p>Placeholder for design</p>
+      <div className="form__design">
+        <img src={design} alt="image" />
       </div>
     </div>
   );
