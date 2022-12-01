@@ -1,16 +1,20 @@
 import "./SignUpBiz.scss";
+import design from "../Assets/Images/frame-33.png";
 
 import Logo from "../components/Logo/Logo";
 
 export default function () {
   return (
-    <div className="sign-up">
+    <div className="sign-up-biz">
       <div className="form">
         <form action="OnSubmit">
           <Logo logoClassName="logo--form" />
           <h1>Tell us about your business</h1>
-          <h3>continued...</h3>
-          <div>
+          <p>
+            We'd like to learn more about your business so that we can provide
+            you with the best experience possible
+          </p>
+          <div className="form__option">
             <label htmlFor="company size">
               <h3>Company Size</h3>
             </label>
@@ -35,7 +39,7 @@ export default function () {
               {/* <option value="unsure" className="form__option--value">I'm not sure</option> */}
             </select>
           </div>
-          <div>
+          <div className="form__option">
             <label htmlFor="Revenue">
               <h3>Monthly Revenue</h3>
             </label>
@@ -64,7 +68,7 @@ export default function () {
               </option>
             </select>
           </div>
-          <div>
+          <div className="form__option">
             <label htmlFor="tax-return">
               <h3>Last Tax Return</h3>
             </label>
@@ -92,14 +96,14 @@ export default function () {
                 Unknown/I need help figure this out
               </option>
             </select>
-            <div>
-              <button>Next</button>
-            </div>
+          </div>
+          <div>
+            <button className="form__button">Next</button>
           </div>
         </form>
       </div>
-      <div className="design">
-        <p>Placeholder for design</p>
+      <div className="form__design">
+        <img src={design} alt="image" />
       </div>
     </div>
   );
