@@ -1,19 +1,30 @@
-.page-header {
-  background-color: transparent;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background-color: white;
   min-height: 70px;
   padding: 0px 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ph-nav-left,
-.ph-nav-right {
-  -webkit-box-align: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 70px;
   position: relative;
+
+  &__wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-left {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 70px;
+  }
+
+  &__nav-right {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .nav--item {
@@ -24,4 +35,5 @@
 
 .logo--header {
   width: 8rem;
+  position: absolute;
 }
