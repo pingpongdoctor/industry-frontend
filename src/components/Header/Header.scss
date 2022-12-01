@@ -1,0 +1,27 @@
+.page-header {
+  background-color: transparent;
+  min-height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ph-nav-left,
+.ph-nav-right {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70px;
+  position: relative;
+}
+
+.nav--item {
+  font-size: 15px;
+  padding: 6px 16px;
+  position: relative;
+}
+
+.logo--header {
+  width: 8rem;
+}
