@@ -1,0 +1,22 @@
+.sign-up {
+  padding: 0 2rem;
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  //   max-width: 65%;
+}
+.design {
+  max-width: 80rem;
+  background-color: lightgray;
+}
+
+select {
+  background-color: lightgray;
+  height: 2rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
