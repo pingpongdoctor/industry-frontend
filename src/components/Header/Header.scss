@@ -1,14 +1,27 @@
 .page-header {
+  background-color: transparent;
+  min-height: 70px;
+  padding: 0px 30px;
   display: flex;
   justify-content: space-between;
-  max-height: 10vh;
 }
 
 .ph-nav-left,
 .ph-nav-right {
-  list-style: none;
+  -webkit-box-align: center;
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 1rem;
+  flex-wrap: wrap;
+  min-height: 70px;
+  position: relative;
+}
+
+.nav--item {
+  font-size: 15px;
+  padding: 6px 16px;
+  position: relative;
+}
+
+.logo--header {
+  width: 8rem;
 }

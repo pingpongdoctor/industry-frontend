@@ -1,7 +1,8 @@
 // Dependencies
-import { divnk } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
 
-// Stydivng
+// Styling
 import "./Header.scss";
 
 // Function
@@ -15,10 +16,7 @@ export default function Header() {
         <div classname="nav-item">Community</div>
       </div>
       <div className="ph-logo">
-        <img
-          src="../../src/Assets/Images/bench-accounting-squarelogo-1568754083341.png"
-          alt="logo"
-        />
+        <Logo logoClassName="logo--header" />
       </div>
       <div className="ph-nav-right">
         <div classname="nav-item">Log In</div>

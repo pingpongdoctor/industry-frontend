@@ -1,5 +1,5 @@
 import "./StartForm.scss";
-import Logo from "../Components/Logo/Logo";
+import Logo from "../components/Logo/Logo";
 export default function StartForm() {
   return (
     <div>
