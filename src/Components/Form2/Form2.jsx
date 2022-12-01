@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useDebugValue, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Form2 = () => {
@@ -6,6 +6,7 @@ const Form2 = () => {
   const [passwordInput, setPasswordInput] = useState("");
   const [checkPasswordInput, setCheckPasswordInput] = useState("");
   const [passwordStrength, setPasswordStrength] = useState("weak");
+  const [passwordField, setPasswordField] = useState("white");
 
   function handleEmailChange(e) {
     setEmailInput(e.target.value);
@@ -23,6 +24,18 @@ const Form2 = () => {
       return false;
     }
   }
+  useEffect(() => {
+    if (passwordInput.split("").length < 7) {
+      setPasswordField("red");
+    } else if (
+      passwordInput.split("").length > 7 &&
+      passwordInput.split("").length < 10
+    ) {
+      setPasswordField("yellow");
+    } else {
+      setPasswordField("green");
+    }
+  }, [passwordInput]);
 
   function handlePasswordChange(e) {
     setPasswordInput(e.target.value);
@@ -83,7 +96,7 @@ const Form2 = () => {
           id="password"
           value={passwordInput}
           onChange={handlePasswordChange}
-          className={passwordStrength === "weak"}
+          className={passwordField}
         />
       </div>
       <label htmlFor="check-password">Re-enter Password</label>
