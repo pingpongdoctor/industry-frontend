@@ -1,0 +1,35 @@
+@use "../../styles/partials/variables" as *;
+@keyframes animated-indicator-20 {
+  0% {
+    width: 0px;
+  }
+  20% {
+    width: 20px;
+  }
+  40% {
+    width: 40px;
+  }
+  60% {
+    width: 60px;
+  }
+  80% {
+    width: 80px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+.indicator {
+  width: 500px;
+  height: 5px;
+  background-color: grey;
+}
+
+.indicator--sign-up {
+  margin-left: 20rem;
+}
+
+.indicator-complete-20 {
+  animation: animated-indicator-20 2s;
+}

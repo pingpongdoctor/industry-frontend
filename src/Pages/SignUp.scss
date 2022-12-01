@@ -1,0 +1,52 @@
+@use "../../src/styles/partials/variables" as *;
+
+.sign-up {
+  padding: 0 5rem;
+}
+
+.sign-up__form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 540px;
+  background-color: $start-form-color;
+  color: #ffffff;
+  padding: 0 30px;
+  border-radius: 5px;
+}
+
+.sign-up__heading {
+  margin: 2rem 0;
+}
+
+.sign-up__text {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.sign-up__input-box {
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+
+.sign-up__button {
+  background-color: $button-color;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 1rem;
+  border: none;
+  margin-top: 5rem;
+}
+
+.sign-up__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 393px;
+}
+
+.sign-up__link {
+  color: grey;
+}
