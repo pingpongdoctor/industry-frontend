@@ -86,3 +86,21 @@
 .sign-up__input-box--error {
   border: 1px solid red;
 }
+
+.sign-up__input-box--weak {
+  &:focus {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+}
+
+.sign-up__input-box--medium {
+  &:focus {
+    background-color: rgba(255, 255, 0, 0.1);
+  }
+}
+
+.sign-up__input-box--strong {
+  &:focus {
+    background-color: rgba(0, 128, 0, 0.1);
+  }
+}
